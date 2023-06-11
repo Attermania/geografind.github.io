@@ -13,18 +13,30 @@
             background: #fff;
         }
         .banner {
+            position: relative;
             height: 50vh;
-            background-image: url('https://images.pexels.com/photos/68704/pexels-photo-68704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-image: url('geografind_icon.png');
             background-size: cover;
             background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+        .banner .gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(28,41,50,0.5), rgba(15,15,15,0.5));
+            z-index: 1;
+        }
         .banner h1 {
             color: #fff;
             font-size: 2em;
             text-align: center;
+            z-index: 2;
+            position: relative;
         }
         .content {
             padding: 2em;
@@ -37,9 +49,10 @@
 </head>
 <body>
     <div class="banner">
+        <div class="gradient-overlay"></div>
         <h1>Geografind</h1>
     </div>
-      <div class="content">
+    <div class="content">
         <h2>Geografind</h2>
         <p>More info coming soon ..</p>
     </div>
